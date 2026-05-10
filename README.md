@@ -152,7 +152,22 @@ asyncio.run(stream())
 
 ---
 
-## 탐지 성능
+## 모델 학습 결과
+
+### Contamination 튜닝
+최적 contamination 값을 찾기 위해 0.01 ~ 0.10 구간을 탐색했습니다.
+
+![Tuning Curve](data/tuning_curve.png)
+
+### 혼동 행렬 & Precision-Recall 곡선
+
+![Model Performance](data/model_performance.png)
+
+### 결정 경계 시각화 (온도 vs 전류)
+
+![Decision Boundary](data/decision_boundary.png)
+
+### 탐지 성능 요약
 
 | 지표 | 값 |
 |------|-----|
@@ -173,6 +188,8 @@ industrial_anomaly_ai/
 │   │   └── anomaly_detector.py # IsolationForest 래퍼
 │   ├── routers/
 │   │   ├── detect.py           # /detect, /ws/stream, /logs
+│   │   ├── train.py            # /model/train (재학습)
+│   │   ├── stats.py            # /stats (집계 통계)
 │   │   └── health.py           # /health, /model/info
 │   └── schemas/
 │       └── sensor.py           # Pydantic 스키마

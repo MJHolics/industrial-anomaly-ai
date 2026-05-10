@@ -15,7 +15,7 @@ data/processed/
 .ipynb_checkpoints/
 data/anomaly_log.db
 data/raw/*.csv
-data/*.png
+data/eda_*.png
 
 # IDE / AI assistant internals
 .claude/
