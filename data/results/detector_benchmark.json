@@ -1,0 +1,94 @@
+{
+  "n": 10500,
+  "split": {
+    "train": 6300,
+    "val": 2100,
+    "test": 2100
+  },
+  "anomaly_rate": 0.0476,
+  "protocol": "semi-supervised novelty: fit on train-normal only; threshold on val; report on test",
+  "ranked_by": "pr_auc",
+  "results": {
+    "IsolationForest": {
+      "roc_auc": 0.9747,
+      "pr_auc": 0.5225,
+      "val_f1": 0.751,
+      "threshold": 0.577,
+      "test": {
+        "precision": 0.4813,
+        "recall": 0.8021,
+        "f1": 0.6016,
+        "tp": 77,
+        "fp": 83,
+        "fn": 19
+      }
+    },
+    "LocalOutlierFactor": {
+      "roc_auc": 1.0,
+      "pr_auc": 1.0,
+      "val_f1": 1.0,
+      "threshold": 2.4629,
+      "test": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 96,
+        "fp": 0,
+        "fn": 0
+      }
+    },
+    "OneClassSVM": {
+      "roc_auc": 1.0,
+      "pr_auc": 1.0,
+      "val_f1": 1.0,
+      "threshold": -6.3596,
+      "test": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 96,
+        "fp": 0,
+        "fn": 0
+      }
+    },
+    "EllipticEnvelope": {
+      "roc_auc": 1.0,
+      "pr_auc": 1.0,
+      "val_f1": 1.0,
+      "threshold": 25.0237,
+      "test": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 96,
+        "fp": 0,
+        "fn": 0
+      }
+    },
+    "RobustZ(baseline)": {
+      "roc_auc": 1.0,
+      "pr_auc": 1.0,
+      "val_f1": 1.0,
+      "threshold": 4.7808,
+      "test": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 96,
+        "fp": 0,
+        "fn": 0
+      }
+    }
+  },
+  "hardcoded_threshold_ref": {
+    "threshold": 0.15,
+    "test": {
+      "precision": 0.0457,
+      "recall": 1.0,
+      "f1": 0.0874,
+      "tp": 96,
+      "fp": 2004,
+      "fn": 0
+    }
+  }
+}
